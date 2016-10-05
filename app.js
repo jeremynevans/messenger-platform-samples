@@ -251,8 +251,8 @@ function receivedMessage(event) {
     // if (storyGoto) {
     //   sendStoryMessage(senderID, storyGoto);
     // }
-      console.log(quickReply.payload);
-      sendStoryMessage(senderID, quickReply.payload);
+      // console.log(quickReply.payload);
+      // sendStoryMessage(senderID, quickReply.payload);
 
     return;
   }
@@ -929,7 +929,7 @@ base('Story 1').select({
             goto: goto[0]
           }
           responses.push(response);
-          console.log(response);
+          // console.log(response);
         }
       }
       var data = {
@@ -953,6 +953,6 @@ base('Story 1').select({
 
 
 
-setTimeout(function () {
-  sendStoryMessage(0,'rec1fhiiJJyA7Yn7s');
-}, 3000);
+// setTimeout(function () {
+//   sendStoryMessage(0,'rec1fhiiJJyA7Yn7s');
+// }, 3000);
