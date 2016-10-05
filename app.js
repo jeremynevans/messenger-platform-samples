@@ -888,12 +888,13 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
     },
     message: {
       text: data.textBlock,
-      metadata: "DEVELOPER_DEFINED_METADATA",
+      // metadata: "DEVELOPER_DEFINED_METADATA",
       quick_replies: quickReplies
     }
   };
 
   console.log(messageData);
+  console.log(quickReplies);
   callSendAPI(messageData);
 }
 
