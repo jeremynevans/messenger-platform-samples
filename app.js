@@ -250,7 +250,7 @@ function receivedMessage(event) {
     var storyGoto =  JSON.parse(quickReply.payload.storyGoto);
     console.log('storyGoto', storyGoto);
     if (storyGoto) {
-      sendStoryMessage(senderID, storyGoto);
+      // sendStoryMessage(senderID, storyGoto);
     }
       // console.log(quickReply.payload);
       // sendStoryMessage(senderID, quickReply.payload);
