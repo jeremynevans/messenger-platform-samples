@@ -1,6 +1,6 @@
 {
     "appSecret": "f56d340b98f7b0fbc3a5c4af147f3e71",
-    "pageAccessToken": "EAAXi2CfA3QABAM0oB0gYuXwk87JW9Jr90NuIJUZAZCcXukUuEFm00z3BtEzcwjkpFFzSaQSeOPMgvvWii8IwWBIJkLXZBhcD2I5eLRWOqAhho8J2s1hnZCzd7eaRZCF9ZCtWu8vKF38oCZBVSz5WPhEmZCCPXQhUU41pOP7iD20mNQZDZD",
+    "pageAccessToken": "EAAXi2CfA3QABAOoEKYV3zK3vzW1vkcbVIOEiRdkrlaD3m7z759tWaF5SlU6v7LWlbTQSrZBLM217ZCmt6bpzLZA21sI6sdZCIAsehWZB1wLOWVb6OrFSuNmnbJMfWZBexJ8OBiIMl6yYAHXQMApkXnV1oMGy4DHkeeMZCWm3nF1NAZDZD",
     "validationToken": "explain_the_news",
     "serverURL": "https://messenger-test-bot-1.herokuapp.com/"
 }
