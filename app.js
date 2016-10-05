@@ -247,10 +247,11 @@ function receivedMessage(event) {
 
     sendTextMessage(senderID, "Quick reply tapped");
 
-    // var storyGoto =  JSON.parse(quickReply.payload.storyGoto);
-    // if (storyGoto) {
-    //   sendStoryMessage(senderID, storyGoto);
-    // }
+    var storyGoto =  JSON.parse(quickReply.payload.storyGoto);
+    console.log('storyGoto', storyGoto);
+    if (storyGoto) {
+      sendStoryMessage(senderID, storyGoto);
+    }
       // console.log(quickReply.payload);
       // sendStoryMessage(senderID, quickReply.payload);
 
@@ -879,7 +880,7 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
     quickReplies.push({
       "content_type": "text",
       "title": response.reply,
-      "payload": "Hello"  //JSON.stringify({storyGoto: response.goto})
+      "payload": JSON.stringify({storyGoto: response.goto})
     })
   });
   var messageData = {
@@ -892,9 +893,6 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
       quick_replies: quickReplies
     }
   };
-
-  console.log(messageData);
-  console.log(quickReplies);
   callSendAPI(messageData);
 }
 
