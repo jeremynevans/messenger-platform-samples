@@ -878,7 +878,7 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
   data.responses.forEach(function(response) {
     quickReplies.push({
       "content_type": "text",
-      "title": response.text,
+      "title": response.reply,
       "payload": "Hello"  //JSON.stringify({storyGoto: response.goto})
     })
   });
@@ -888,7 +888,7 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
     },
     message: {
       text: data.textBlock,
-      // metadata: "DEVELOPER_DEFINED_METADATA",
+      metadata: "DEVELOPER_DEFINED_METADATA",
       quick_replies: quickReplies
     }
   };
