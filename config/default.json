@@ -1,5 +1,5 @@
 {
-    "appSecret": "f56d340b98f7b0fbc3a5c4af147f3e71",
+    "appSecret": "c0993c333e12612a0faa001e12d4ad0d",
     "pageAccessToken": "EAAXi2CfA3QABAOoEKYV3zK3vzW1vkcbVIOEiRdkrlaD3m7z759tWaF5SlU6v7LWlbTQSrZBLM217ZCmt6bpzLZA21sI6sdZCIAsehWZB1wLOWVb6OrFSuNmnbJMfWZBexJ8OBiIMl6yYAHXQMApkXnV1oMGy4DHkeeMZCWm3nF1NAZDZD",
     "validationToken": "explain_the_news",
     "serverURL": "https://messenger-test-bot-1.herokuapp.com/"
