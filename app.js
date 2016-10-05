@@ -893,6 +893,7 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
     }
   };
 
+  console.log(messageData);
   callSendAPI(messageData);
 }
 
