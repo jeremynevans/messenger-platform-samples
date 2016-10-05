@@ -247,8 +247,8 @@ function receivedMessage(event) {
 
     sendTextMessage(senderID, "Quick reply tapped");
 
-    console.log('pre-storyGoto', quickReply.payload.storyGoto);
-    var storyGoto =  JSON.parse(quickReply.payload.storyGoto);
+    console.log('pre-storyGoto', quickReply.payload);
+    var storyGoto =  JSON.parse(quickReply.payload);
     console.log('storyGoto', storyGoto);
     if (storyGoto) {
       // sendStoryMessage(senderID, storyGoto);
