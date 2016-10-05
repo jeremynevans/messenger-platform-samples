@@ -859,18 +859,20 @@ module.exports = app;
 var storyData = {};
 
 var sendStoryMessage = function(recipientId, key) {
-  var data = storyData[key];
-  console.log(data);
-  var textBlocks = data.text;
-  for(var i in textBlocks) {
-    if (i < text.length - 1) {
-      console.log(i, textBlocks[i]);
-      sendTextMessage(recipientId, textBlocks[i]);
-    } else {
-      console.log("last");
-      console.log(i, textBlocks[i]);
-      data.textBlock = textBlocks[i];
-      sendStoryMessageQuickReplies(recipientId, data);
+  if (storyData.keys(obj).length) {
+    var data = storyData[key];
+    console.log(data);
+    var textBlocks = data.text;
+    for(var i in textBlocks) {
+      if (i < text.length - 1) {
+        console.log(i, textBlocks[i]);
+        sendTextMessage(recipientId, textBlocks[i]);
+      } else {
+        console.log("last");
+        console.log(i, textBlocks[i]);
+        data.textBlock = textBlocks[i];
+        sendStoryMessageQuickReplies(recipientId, data);
+      }
     }
   }
 }
