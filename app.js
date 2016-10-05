@@ -245,13 +245,13 @@ function receivedMessage(event) {
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
-    sendTextMessage(senderID, "Quick reply tapped");
+    // sendTextMessage(senderID, "Quick reply tapped");
 
     console.log('pre-storyGoto', quickReply.payload);
     var storyGoto =  JSON.parse(quickReply.payload);
     console.log('storyGoto', storyGoto);
     if (storyGoto) {
-      // sendStoryMessage(senderID, storyGoto);
+      sendStoryMessage(senderID, storyGoto);
     }
       // console.log(quickReply.payload);
       // sendStoryMessage(senderID, quickReply.payload);
