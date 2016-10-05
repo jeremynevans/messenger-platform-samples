@@ -854,9 +854,10 @@ module.exports = app;
 var storyData = {};
 
 var sendStoryMessage = function(recipientId, key) {
+  console.log(storyData);
   var data = storyData[key];
   var text = data.text;
-  for(i in text) {
+  for(var i in text) {
     if (i < text.length - 1) {
       sendTextMessage(recipientId, text);
     } else {
@@ -925,6 +926,7 @@ base('Story 1').select({
             goto: goto[0]
           }
           responses.push(response);
+          console.log(response);
         }
       }
       var data = {
@@ -932,7 +934,7 @@ base('Story 1').select({
         text: text,
         responses: responses
       }
-      // storyData[]
+      storyData[record.id] = data;
     });
 
     // To fetch the next page of records, call `fetchNextPage`.
@@ -945,3 +947,9 @@ base('Story 1').select({
         console.log(error);
     }
 });
+
+
+
+setTimeout(function () {
+  sendStoryMessage(0,'rec1fhiiJJyA7Yn7s');
+}, 3000);
