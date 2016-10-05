@@ -857,13 +857,16 @@ module.exports = app;
 var storyData = {};
 
 var sendStoryMessage = function(recipientId, key) {
-  console.log(storyData);
+  // console.log(storyData);
   var data = storyData[key];
   var text = data.text;
   for(var i in text) {
     if (i < text.length - 1) {
+      console.log(i, text);
       sendTextMessage(recipientId, text);
     } else {
+      console.log("last");
+      console.log(i, text);
       data.textBlock = text[i];
       sendStoryMessageQuickReplies(recipientId, data);
     }
