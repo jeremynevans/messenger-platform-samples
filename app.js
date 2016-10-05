@@ -247,8 +247,9 @@ function receivedMessage(event) {
 
     sendTextMessage(senderID, "Quick reply tapped");
 
-    if (quickReply.payload.storyGoto) {
-      sendStoryMessage(senderID, quickReply.payload.storyGoto);
+    var storyGoto =  JSON.parse(quickReply.payload.storyGoto);
+    if (storyGoto) {
+      sendStoryMessage(senderID, storyGoto);
     }
 
     return;
@@ -873,7 +874,7 @@ var sendStoryMessageQuickReplies = function(recipientId, data) {
     quickReplies.push({
       "content_type": "text",
       "title": response.text,
-      "payload": {storyGoto: response.goto}
+      "payload": JSON.stringify({storyGoto: response.goto})
     })
   });
   var messageData = {
